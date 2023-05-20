@@ -31,7 +31,7 @@ public class MakeChange {
 
 //		User Story #4
 //		If the amount tendered is more than the cost of the item, display the number of bills and coins that should be given to the customer.
-//		String change= makeChange(moneyGiven, priceOfItem);
+		
 		if (priceOfItem < tenderedMoney) {
 			System.out.println(makeChange(priceOfItem, tenderedMoney));
 		}
