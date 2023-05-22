@@ -17,30 +17,30 @@ public class MakeChange {
 //		The user is then prompted asking how much money was tendered by the customer.
 
 		System.out.println("How much money was given by the Customer " + "in dolars and cents: ");
-		double tenderedMoney = kb.nextDouble();
+		double moneyGiven = kb.nextDouble();
 
 //		User Story #3
 //		Display an appropriate message if the customer provided too little money or the exact amount.
 
-		if (priceOfItem - tenderedMoney == 0) {
+		if (priceOfItem - moneyGiven == 0) {
 			System.out.println("You gave the exact amount of money for the item " + " you get no change back!");
 
-		} else if (priceOfItem > tenderedMoney) {
+		} else if (priceOfItem > moneyGiven) {
 			System.out.println("ERROR! NOT ENOUGH MONEY, NO SOUP FOR YOU!");
 		}
 
 //		User Story #4
 //		If the amount tendered is more than the cost of the item, display the number of bills and coins that should be given to the customer.
 		
-		if (priceOfItem < tenderedMoney) {
-			System.out.println(makeChange(priceOfItem, tenderedMoney));
+		if (priceOfItem < moneyGiven) {
+			System.out.println(makeChange(priceOfItem, moneyGiven));
 		}
 
 		kb.close();
 	}
 
-	public static String makeChange(double priceOfItem, double tenderedMoney) {
-		double total = tenderedMoney - priceOfItem;
+	public static String makeChange(double priceOfItem, double moneyGiven) {
+		double total = moneyGiven - priceOfItem;
 		int twenties, tens, fives, ones, quarts, dimes, nickels, pennies;
 		String response = "";
 
